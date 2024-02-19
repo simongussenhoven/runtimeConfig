@@ -1,16 +1,21 @@
-<script setup lang="ts"></script>
-
 <template>
   <main>
     <header>
       <nav>
-        <NuxtLink to="/"> Home </NuxtLink>
-        <NuxtLink to="/about"> About </NuxtLink>
+        <NuxtLink to="/">
+          Home
+        </NuxtLink>
+        <NuxtLink to="/about">
+          About
+        </NuxtLink>
       </nav>
     </header>
     <nuxt-page />
   </main>
 </template>
+<script setup lang="ts">
+const config = useRuntimeConfig()
+</script>
 
 <style scoped lang="css">
 header {
@@ -18,7 +23,7 @@ header {
   max-width: 100vw;
 }
 
-nav > a {
+nav>a {
   padding-left: 1rem;
   padding-right: 1rem;
 }
